@@ -36,10 +36,10 @@ export function Contact() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="bg-slate-800/50 backdrop-blur-sm p-12 rounded-2xl border border-purple-500/20"
+            className="bg-slate-800/50 p-12 bg-transparent"
           >
             <p className="text-gray-300 mb-8 text-lg">
-              Si estás interesado en mis servicios puedes contactar conmigo cualquier opción que te dejo aquí
+              Si estás interesado en mis servicios puedes contactar conmigo en cualquier opción que te dejo aquí
             </p>
 
             
