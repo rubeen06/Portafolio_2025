@@ -28,15 +28,15 @@ export function Projects() {
       backend: 'https://github.com/rubeen06/MiAgendaBackEnd.git',
       frontend: 'https://github.com/rubeen06/MiAgendaFrontEnd.git',
     },
-    /*{
-      title: 'Mobile Fitness App',
+    {
+      title: 'BlogCoches',
       description:
-        'Aplicación móvil para seguimiento de ejercicios, planes de entrenamiento personalizados y estadísticas de progreso.',
-      image: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzY0OTY2OTI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['React Native', 'Firebase', 'Redux'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
-    },
+        'Plataforma web de gestión de contenidos desarrollada bajo una arquitectura de N-Capas para asegurar escalabilidad y desacoplamiento. Implementa un sistema completo de administración de artículos y categorías con un enfoque profesional en la seguridad y el rendimiento.Arquitectura: División lógica en Acceso a Datos (Repository Pattern), Modelos y Utilidades. Seguridad: Gestión avanzada de usuarios, roles y recuperación de cuentas con ASP.NET Core Identity.',
+      image: '/img/BlogCoches.png',
+      tags: ['ASP.NET Core MVC', '.NET 10', 'Entity Framework Core', 'SQL SERVER', 'Azure', 'Bootstrap', 'CSS'],
+      github: 'https://github.com/rubeen06/BlogCochesSolution',
+      demo: 'https://blogcochesazvol1-h0brcbh4hwfmagdv.westeurope-01.azurewebsites.net',
+    },/*
     {
       title: 'Developer Portfolio',
       description:
