@@ -1,7 +1,7 @@
-import { motion } from 'motion/react';
-import { useInView } from 'react-intersection-observer';
-import { Github } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { motion } from "motion/react";
+import { useInView } from "react-intersection-observer";
+import { Github } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
   const [ref, inView] = useInView({
@@ -11,32 +11,47 @@ export function Projects() {
 
   const projects = [
     {
-      title: 'Gestion de Personal',
-      description:
-        'CRUD de Gestión de Personal de Hospitales',
-      image: '/img/proyectoHospitales.png',
-      tags: ['Angular', 'Spring Boot', 'MySQL', 'Git', 'GitHub', 'Docker', 'Docker Compose'],
-      backend: 'https://github.com/rubeen06/GestionHospitalBackEnd.git',
-      frontend: 'https://github.com/rubeen06/GestionHospitalFrontEnd.git',
+      title: "Gestion de Personal",
+      description: "CRUD de Gestión de Personal de Hospitales",
+      image: "/img/proyectoHospitales.png",
+      tags: [
+        "Angular",
+        "Spring Boot",
+        "MySQL",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Docker Compose",
+      ],
+      backend: "https://github.com/rubeen06/GestionHospitalBackEnd.git",
+      frontend: "https://github.com/rubeen06/GestionHospitalFrontEnd.git",
     },
     {
-      title: 'App Móvil Mi Agenda',
+      title: "App Móvil Mi Agenda",
       description:
-        'Aplicación móvil que se basa en una agenda donde puedes gestionar eventos, notas y tareas. El usuario puede logearse y registrarse con usuario y contraseña.',
-      image: '/img/proyectoMiAgenda.png',
-      tags: ['Java', 'Node.js', 'Retrofit', 'MongoDB'],
-      backend: 'https://github.com/rubeen06/MiAgendaBackEnd.git',
-      frontend: 'https://github.com/rubeen06/MiAgendaFrontEnd.git',
+        "Aplicación móvil que se basa en una agenda donde puedes gestionar eventos, notas y tareas. El usuario puede logearse y registrarse con usuario y contraseña.",
+      image: "/img/proyectoMiAgenda.png",
+      tags: ["Java", "Node.js", "Retrofit", "MongoDB"],
+      backend: "https://github.com/rubeen06/MiAgendaBackEnd.git",
+      frontend: "https://github.com/rubeen06/MiAgendaFrontEnd.git",
     },
     {
-      title: 'BlogCoches',
+      title: "BlogCoches",
       description:
-        'Plataforma web de gestión de contenidos desarrollada bajo una arquitectura de N-Capas para asegurar escalabilidad y desacoplamiento. Implementa un sistema completo de administración de artículos y categorías con un enfoque profesional en la seguridad y el rendimiento.Arquitectura: División lógica en Acceso a Datos (Repository Pattern), Modelos y Utilidades. Seguridad: Gestión avanzada de usuarios, roles y recuperación de cuentas con ASP.NET Core Identity.',
-      image: '/img/BlogCoches.png',
-      tags: ['ASP.NET Core MVC', '.NET 10', 'Entity Framework Core', 'SQL SERVER', 'Azure', 'Bootstrap', 'CSS'],
-      github: 'https://github.com/rubeen06/BlogCochesSolution',
-      demo: 'https://blogcochesazvol1-h0brcbh4hwfmagdv.westeurope-01.azurewebsites.net',
-    },/*
+        "Plataforma web de gestión de contenidos desarrollada bajo una arquitectura de N-Capas para asegurar escalabilidad y desacoplamiento. Implementa un sistema completo de administración de artículos y categorías con un enfoque profesional en la seguridad y el rendimiento.Arquitectura: División lógica en Acceso a Datos (Repository Pattern), Modelos y Utilidades. Seguridad: Gestión avanzada de usuarios, roles y recuperación de cuentas con ASP.NET Core Identity.",
+      image: "/img/BlogCoches.png",
+      tags: [
+        "ASP.NET Core MVC",
+        ".NET 10",
+        "Entity Framework Core",
+        "SQL SERVER",
+        "Azure",
+        "Bootstrap",
+        "CSS",
+      ],
+      github: "https://github.com/rubeen06/BlogCochesSolution",
+      demo: "https://blogcochesazvol1-h0brcbh4hwfmagdv.westeurope-01.azurewebsites.net",
+    } /*
     {
       title: 'Developer Portfolio',
       description:
@@ -45,11 +60,14 @@ export function Projects() {
       tags: ['Next.js', 'MDX', 'Framer Motion'],
       github: 'https://github.com',
       demo: 'https://demo.com',
-    },*/
+    },*/,
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+    <section
+      id="projects"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -58,9 +76,7 @@ export function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-white mb-4">
-            Proyectos Destacados
-          </h2>
+          <h2 className="text-white mb-4">Proyectos Destacados</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full" />
         </motion.div>
 
@@ -98,50 +114,58 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4">
-                  <a
-                    href={project.backend}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
-                  >
-                    <Github size={20} />
-                    <span>Backend</span>
-                  </a>
-                  <a
-                    href={project.frontend}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
-                  >
-                    <Github size={20} />
-                    <span>Frontend</span>
+                <div className="flex flex-wrap gap-4">
+                  {/* Solo aparece si existe la propiedad backend */}
+                  {project.backend && (
+                    <a
+                      href={project.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
+                    >
+                      <Github size={20} />
+                      <span>Backend</span>
+                    </a>
+                  )}
 
-                    
-                  </a>
+                  {/* Solo aparece si existe la propiedad frontend */}
+                  {project.frontend && (
+                    <a
+                      href={project.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
+                    >
+                      <Github size={20} />
+                      <span>Frontend</span>
+                    </a>
+                  )}
 
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
-                  >
-                    <Github size={20} />
-                    <span>GitHub</span>
+                  {/* Solo aparece si existe la propiedad github (como en BlogCoches) */}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
+                    >
+                      <Github size={20} />
+                      <span>GitHub</span>
+                    </a>
+                  )}
 
-                    
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
-                  >
-                    <Github size={20} />
-                    <span>Demo</span>
-
-                    
-                  </a>
+                  {/* Solo aparece si existe la propiedad demo (como en BlogCoches) */}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
+                    >
+                      <Github size={20} />
+                      <span>Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
