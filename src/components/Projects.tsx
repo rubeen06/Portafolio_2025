@@ -116,6 +116,31 @@ export function Projects() {
                   >
                     <Github size={20} />
                     <span>Frontend</span>
+
+                    
+                  </a>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
+                  >
+                    <Github size={20} />
+                    <span>GitHub</span>
+
+                    
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
+                  >
+                    <Github size={20} />
+                    <span>Demo</span>
+
+                    
                   </a>
                 </div>
               </div>
