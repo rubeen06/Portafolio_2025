@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
-import { Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
@@ -115,7 +115,7 @@ export function Projects() {
                 </div>
 
                 <div className="flex flex-wrap gap-4">
-                  {/* Solo aparece si existe la propiedad backend */}
+        
                   {project.backend && (
                     <a
                       href={project.backend}
@@ -128,7 +128,7 @@ export function Projects() {
                     </a>
                   )}
 
-                  {/* Solo aparece si existe la propiedad frontend */}
+                  
                   {project.frontend && (
                     <a
                       href={project.frontend}
@@ -141,7 +141,7 @@ export function Projects() {
                     </a>
                   )}
 
-                  {/* Solo aparece si existe la propiedad github (como en BlogCoches) */}
+                  
                   {project.github && (
                     <a
                       href={project.github}
@@ -154,7 +154,7 @@ export function Projects() {
                     </a>
                   )}
 
-                  {/* Solo aparece si existe la propiedad demo (como en BlogCoches) */}
+                  
                   {project.demo && (
                     <a
                       href={project.demo}
@@ -162,7 +162,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors"
                     >
-                      <Github size={20} />
+                      <ExternalLink size={20} />
                       <span>Demo</span>
                     </a>
                   )}
