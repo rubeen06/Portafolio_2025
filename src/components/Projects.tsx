@@ -51,6 +51,21 @@ export function Projects() {
       ],
       github: "https://github.com/rubeen06/BlogCochesSolution",
       demo: "https://blogcochesazvol1-h0brcbh4hwfmagdv.westeurope-01.azurewebsites.net",
+    },{
+      title: "AI OPS",
+      description:
+        "AI Ops Mentor es una aplicación inteligente diseñada para optimizar la toma de decisiones en entornos industriales y de producción. Utiliza IA Generativa (Llama 3 vía Groq) para analizar datos de rendimiento y transformar hojas de cálculo crudas en planes de acción estratégicos.",
+      image: "/img/ai-ops.png",
+      tags: [
+        "Python",
+        "Pandas",
+        "Streamlit",
+        "Plotly",
+        "NumPy",
+        "Groq Cloud"
+      ],
+      github: "https://github.com/rubeen06/ai-ops-mentor",
+      demo: "https://ai-ops.streamlit.app/",
     } /*
     {
       title: 'Developer Portfolio',
